@@ -1,0 +1,23 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d3d6da;
+  padding-bottom: 10px;
+}
+.header-title {
+  font-size: 40px;
+  font-weight: bold;
+  padding-left: 95px;
+}
+.header-icons {
+  display: flex;
+}
+.header-menu img {
+  width: 30px;
+}
+
+.header-icons img {
+  width: 30px;
+  margin-left: 10px;
+}

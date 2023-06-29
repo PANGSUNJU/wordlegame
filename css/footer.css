@@ -1,0 +1,30 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0px 30px 0px;
+}
+.key-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+.key-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d3d6da;
+  border: 3px solid #d3d6da;
+  border-radius: 5px;
+  width: 37px;
+  height: 50px;
+  font-weight: bold;
+}
+.big-key {
+  width: 55px;
+}
+
+/* 키보드 배치시 key-row에 "flex-direction: column;"을 줌으로 키보드 배치가 세로로 되는 표출되었다. div영역을 잘못 줘서 그런가 싶어서 다시 작성하기엔 이상하기도 하고 너무 많은 시간을 들여야할 것으로 보였고, 조금의 휴식을 가지고 다시 확인해보니 footer 태그 자체에다 주면되지 않을까 생각이 들었다. 적용하고 보니 생각했던 모양새가 나왔고 뿌듯했다.  */
