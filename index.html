@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <header>
@@ -92,7 +93,7 @@
         <div class="key-board" data-key="L">L</div>
       </div>
       <div class="key-row">
-        <div class="key-board big-key" data-key="ENTER">ENTER</div>
+        <div id="enter" class="key-board big-key" data-key="ENTER">ENTER</div>
         <div class="key-board" data-key="Z">Z</div>
         <div class="key-board" data-key="X">X</div>
         <div class="key-board" data-key="C">C</div>
@@ -100,10 +101,16 @@
         <div class="key-board" data-key="B">B</div>
         <div class="key-board" data-key="N">N</div>
         <div class="key-board" data-key="M">M</div>
-        <div class="key-board big-key" data-key="back">
-          <img style="width: 20px" src="assets/backspace.svg" alt="setting" />
+        <div id="back" class="key-board big-key" data-key="BACK">
+          <img
+            data-key="BACK"
+            style="width: 20px"
+            src="assets/backspace.svg"
+            alt="setting"
+          />
         </div>
       </div>
     </footer>
+    <script src="js/index.js"></script>
   </body>
 </html>
