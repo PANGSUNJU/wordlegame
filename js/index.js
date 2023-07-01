@@ -4,7 +4,7 @@ let index = 0;
 let attempts = 0;
 let timer;
 const regex = /[A-Z]/;
-
+let 맞은_개수 = 0;
 // $(document).ready(function () {
 //   $(".key-board").on("click", function () {
 //     alert(this.textContent);
@@ -14,10 +14,19 @@ const regex = /[A-Z]/;
 function appStart() {
   const displayGameover = () => {
     const div = document.createElement("div");
-    div.innerText = "게임이 종료됐습니다.";
-    div.style =
-      "display:flex; justify-content:center; align-items:center; position:absolute; top:40vh; left:45vw; background-color:yellow; width: 200px; height:150px";
-    document.body.appendChild(div);
+    if (맞은_개수 === 5) {
+      div.innerText = "성공하였습니다.";
+      div.style =
+        "display:flex; justify-content:center; align-items:center; position:absolute; top:40vh; left:45vw; background-color:yellow; width: 200px; height:150px";
+      div.className = "succese";
+      document.body.appendChild(div);
+    } else {
+      div.innerText = "게임이 종료됐습니다.";
+      div.style =
+        "display:flex; justify-content:center; align-items:center; position:absolute; top:40vh; left:45vw; background-color:yellow; width: 200px; height:150px";
+      div.className = "fail";
+      document.body.appendChild(div);
+    }
   };
   const nextLine = () => {
     if (attempts === 6) return gameover();
@@ -41,7 +50,6 @@ function appStart() {
     if (index !== 0) index -= 1;
   };
   const hendleEnterKey = () => {
-    let 맞은_개수 = 0;
     for (let i = 0; i < 5; i++) {
       const block = document.querySelector(
         `.board-block[data-index='${attempts}${i}']`
@@ -67,7 +75,9 @@ function appStart() {
       }
     }
     if (맞은_개수 === 5) gameover();
-    else nextLine();
+    else if (attempts === 5) {
+      gameover();
+    } else nextLine();
   };
   const handleKeyDown = (event) => {
     const key = event.key.toUpperCase();

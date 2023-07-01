@@ -25,3 +25,41 @@ main {
   width: 60px;
   height: 60px;
 }
+
+@keyframes success-animation {
+  0% {
+    background-color: white;
+    transform: scale(1);
+  }
+  50% {
+    background-color: green;
+    transform: scale(1.2);
+  }
+  100% {
+    background-color: white;
+    transform: scale(1);
+  }
+}
+
+@keyframes failure-animation {
+  0% {
+    background-color: white;
+    transform: scale(1);
+  }
+  50% {
+    background-color: red;
+    transform: scale(1.2);
+  }
+  100% {
+    background-color: white;
+    transform: scale(1);
+  }
+}
+
+.succese {
+  animation: success-animation 1s ease-in-out infinite;
+}
+
+.fail {
+  animation: failure-animation 1s ease-in-out infinite;
+}
